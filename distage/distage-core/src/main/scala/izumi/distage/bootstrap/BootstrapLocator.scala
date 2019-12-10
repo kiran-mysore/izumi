@@ -132,7 +132,8 @@ object BootstrapLocator {
 
     make[BindingTranslator].from[BindingTranslator.Impl]
 
-    make[ProxyStrategy].from[ProxyStrategyDefaultImpl]
+//    make[ProxyStrategy].from[ProxyStrategyDefaultImpl]
+    make[ProxyStrategy].from[ProxyStrategyFailingImpl]
   }
 
   final lazy val noProxiesBootstrap: BootstrapContextModule = defaultBootstrap ++ noProxies
